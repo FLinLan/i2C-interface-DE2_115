@@ -13,8 +13,7 @@ vlib work
 # Compile Verilog
 #  - All Verilog files that are part of this design should have
 #    their own "vlog" line below.
-vlog "./mux2_1.sv"
-vlog "./mux2_1_tb.sv"
+vlog "./i2c_master_single_byte.v"
 
 
 # Call vsim to invoke simulator
@@ -22,13 +21,14 @@ vlog "./mux2_1_tb.sv"
 #    the testbench module you want to execute.
 #  - If you need the altera_mf_ver library, add "-Lf altera_mf_lib"
 #    (no quotes) to the end of the vsim command
-vsim -voptargs="+acc" -t 1ps -lib work mux2_1_tb
+vsim -voptargs="+acc" -t 1ps -lib work i2c_master_single_byte_tb
+
 
 
 # Source the wave do file
 #  - This should be the file that sets up the signal window for
 #    the module you are testing.
-do mux2_1_wave.do
+do i2c_master_single_byte_wave.do
 
 
 # Set the window types

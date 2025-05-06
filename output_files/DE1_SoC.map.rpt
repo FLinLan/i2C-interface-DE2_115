@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Tue May 06 11:37:16 2025
+Tue May 06 12:03:06 2025
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -10,7 +10,13 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +40,27 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue May 06 11:37:16 2025           ;
-; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
-; Revision Name               ; DE1_SoC                                     ;
-; Top-level Entity Name       ; DE1_SoC                                     ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue May 06 12:03:06 2025       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; DE1_SoC                                     ;
+; Top-level Entity Name           ; DE1_SoC                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 89                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -155,26 +166,211 @@ agreement for further details.
 +----------------------------+-------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; DE1_SoC.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimate of Logic utilization (ALMs needed) ; 0                ;
+;                                             ;                  ;
+; Combinational ALUT usage for logic          ; 0                ;
+;     -- 7 input functions                    ; 0                ;
+;     -- 6 input functions                    ; 0                ;
+;     -- 5 input functions                    ; 0                ;
+;     -- 4 input functions                    ; 0                ;
+;     -- <=3 input functions                  ; 0                ;
+;                                             ;                  ;
+; Dedicated logic registers                   ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 89               ;
+;                                             ;                  ;
+; Total DSP Blocks                            ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; V_GPIO[0]~output ;
+; Maximum fan-out                             ; 1                ;
+; Total fan-out                               ; 125              ;
+; Average fan-out                             ; 0.58             ;
++---------------------------------------------+------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |DE1_SoC                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 89   ; 0            ; |DE1_SoC            ; DE1_SoC     ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_io_obuf        ; 36                          ;
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+; boundary_port         ; 89                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue May 06 11:36:56 2025
+    Info: Processing started: Tue May 06 12:02:58 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file de1_soc.sv
     Info (12023): Found entity 1: DE1_SoC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 3
-Error (10054): Verilog HDL File I/O error at i2c_master_single_byte.v(1): can't open Verilog Design File "timescale.v" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_single_byte.v Line: 1
-Error (10054): Verilog HDL File I/O error at i2c_master_single_byte.v(4): can't open Verilog Design File "i2c_master_defines.v" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_single_byte.v Line: 4
-Error (10112): Ignored design unit "i2c_master_single_byte" at i2c_master_single_byte.v(6) due to previous errors File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_single_byte.v Line: 6
-Info (12021): Found 0 design units, including 0 entities, in source file i2c_master_single_byte.v
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 1 warning
-    Error: Peak virtual memory: 4770 megabytes
-    Error: Processing ended: Tue May 06 11:37:16 2025
-    Error: Elapsed time: 00:00:20
-    Error: Total CPU time (on all processors): 00:00:17
+Info (12021): Found 1 design units, including 1 entities, in source file i2c_master_single_byte.v
+    Info (12023): Found entity 1: i2c_master_single_byte File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_single_byte.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at i2c_master_single_byte.v(44): created implicit net for "o_Done" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_single_byte.v Line: 44
+Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
+Warning (10034): Output port "LEDR" at DE1_SoC.sv(7) has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "V_GPIO[0]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[1]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[2]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[3]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[4]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[5]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[6]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[7]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[8]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[9]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[10]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[11]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[12]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[13]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[14]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[15]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[16]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[17]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[18]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[19]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[20]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[21]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[22]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[23]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[24]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[25]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[26]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[27]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[28]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[29]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[30]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[31]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[32]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[33]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[34]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+    Warning (13040): bidirectional pin "V_GPIO[35]" has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 8
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX0[2]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX0[3]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX0[4]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX0[5]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX4[0]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX4[2]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX4[3]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX4[4]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX4[5]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 6
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 5
+Info (21057): Implemented 89 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21060): Implemented 36 bidirectional pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Tue May 06 12:03:06 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 

@@ -1,44 +1,36 @@
 # NOTES:
-#  - The most important thing is locating where all of the files
-#    are and specifying the correct paths (absolute or relative)
-#    in the commands below.
-#  - You will also need to make sure that your current directory
-#    (cd) in ModelSim is the directory containing this .do file.
+#  - Make sure your working directory (cd) in ModelSim is
+#    the folder containing this .do file and all the .v/.sv files.
+#  - Adjust the quoted paths if your sources live in sub-folders.
 
-
-# Create work library
+# 1) Create work library
 vlib work
 
+# 2) Compile Verilog/SystemVerilog sources in dependency order
+#    (timescale.v first, then macros, then controllers, then top, then wrapper)
 
-# Compile Verilog
-#  - All Verilog files that are part of this design should have
-#    their own "vlog" line below.
-vlog "./i2c_master_single_byte.v"
+vlog  "./timescale.v"
+vlog  "./i2c_master_defines.v"
+vlog  "./i2c_master_bit_ctrl.v"
+vlog  "./i2c_master_byte_ctrl.v"
+vlog  "./i2c_master_top.v"
+vlog  "./i2c_master_single_byte.v"
 
+# 3) Compile your testbench last
+vlog  "./i2c_master_single_byte_tb.v"
 
-# Call vsim to invoke simulator
-#  - Make sure the last item on the line is the correct name of
-#    the testbench module you want to execute.
-#  - If you need the altera_mf_ver library, add "-Lf altera_mf_lib"
-#    (no quotes) to the end of the vsim command
+# 4) Launch simulation
 vsim -voptargs="+acc" -t 1ps -lib work i2c_master_single_byte_tb
 
+# 5) Source your waveform setup
+do    i2c_master_single_byte_wave.do
 
+# 6) Open the views you like
+view  wave
+view  structure
+view  signals
 
-# Source the wave do file
-#  - This should be the file that sets up the signal window for
-#    the module you are testing.
-do i2c_master_single_byte_wave.do
+# 7) Run
+run   -all
 
-
-# Set the window types
-view wave
-view structure
-view signals
-
-
-# Run the simulation
-run -all
-
-
-# End
+# End of script

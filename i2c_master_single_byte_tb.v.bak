@@ -1,0 +1,3 @@
+module i2c_master_single_byte_tb();
+	
+endmodule

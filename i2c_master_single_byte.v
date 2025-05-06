@@ -1,7 +1,8 @@
-// `include "timescale.v"
+//// synopsys translate_off
+`include "timescale.v"
 //// synopsys translate_on
-//
-// `include "i2c_master_defines.v"
+
+`include "i2c_master_defines.v"
 
 module i2c_master_single_byte #(parameter CLK_RATIO = 25)
     (input i_Clk,                   // Main FPGA clock
@@ -20,7 +21,7 @@ module i2c_master_single_byte #(parameter CLK_RATIO = 25)
      inout io_sda                   // Actual I2C Data (fixed: changed from input to inout)
     );
     
-    // Defines the pper limit of an internal counter. This sets the frequency of the I2C
+    // Defines the upper limit of an internal counter. This sets the frequency of the I2C
     // clock, which depends on teh input clock frequency. For details on this math, see the
     // I2C User Guide, Section 3.2.1 - Prescale Register
     localparam [15:0] CLK_COUNT = CLK_RATIO / 5 - 1;
@@ -99,7 +100,8 @@ module i2c_master_single_byte #(parameter CLK_RATIO = 25)
         begin
         
             // Default assignments 
-            r_Cmd_Start <= 1'b0;            
+            r_Cmd_Start <= 1'b0; 
+			   r_Cmd_Stop <= 1'b0;
             
             case (r_SM_Main)
                 IDLE:
@@ -152,8 +154,8 @@ module i2c_master_single_byte #(parameter CLK_RATIO = 25)
                 // Send the data to write to the slave
                 SEND_WR_DATA:
                 begin
-                    r_Wr_Start <= 1'b1;
-                    r_Wr_Cmd   <= 1'b1;  // Fixed: Set write command
+                    r_Cmd_Stop <= 1'b1;
+                    // r_Wr_Cmd   <= 1'b1;  // Fixed: Set write command
                     r_Cmd_Byte <= r_Wr_Byte;
                     r_SM_Main  <= WAIT_WR_DATA;
                 end

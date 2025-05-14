@@ -18,12 +18,15 @@ vlog  "./i2c_master_single_byte.v"
 
 # 3) Compile your testbench last
 vlog  "./i2c_master_single_byte_tb.v"
+vlog "./i2c_master_top_tb.v"
 
 # 4) Launch simulation
 vsim -voptargs="+acc" -t 1ps -lib work i2c_master_single_byte_tb
+vsim -voptargs="+acc" -t 1ps -lib work i2c_master_top_tb
 
 # 5) Source your waveform setup
-do    i2c_master_single_byte_wave.do
+# do    i2c_master_single_byte_wave.do
+do    i2c_master_top_wave.do
 
 # 6) Open the views you like
 view  wave

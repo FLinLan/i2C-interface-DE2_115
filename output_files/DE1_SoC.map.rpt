@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Tue May 13 22:11:53 2025
+Tue May 13 22:55:06 2025
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 13 22:11:53 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue May 13 22:55:06 2025       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; DE1_SoC                                     ;
@@ -258,7 +258,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue May 13 22:11:44 2025
+    Info: Processing started: Tue May 13 22:54:58 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -278,6 +278,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file i2c_mas
     Info (12023): Found entity 1: i2c_master_single_byte File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_single_byte.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file i2c_master_single_byte_tb.v
     Info (12023): Found entity 1: i2c_master_single_byte_tb File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_single_byte_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file i2c_master_top_tb.v
+    Info (12023): Found entity 1: i2c_master_top_tb File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_top_tb.v Line: 3
 Warning (10236): Verilog HDL Implicit Net warning at i2c_master_single_byte.v(45): created implicit net for "o_Done" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_single_byte.v Line: 45
 Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
 Warning (10034): Output port "LEDR" at DE1_SoC.sv(7) has no driver File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 7
@@ -380,9 +382,9 @@ Info (21057): Implemented 89 device resources after synthesis - the final resour
     Info (21059): Implemented 52 output pins
     Info (21060): Implemented 36 bidirectional pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 97 warnings
-    Info: Peak virtual memory: 4800 megabytes
-    Info: Processing ended: Tue May 13 22:11:53 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4802 megabytes
+    Info: Processing ended: Tue May 13 22:55:06 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:15
 
 

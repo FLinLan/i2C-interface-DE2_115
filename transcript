@@ -2,227 +2,88 @@
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:57:04 on May 13,2025
+# Start time: 08:53:22 on May 19,2025
 # vlog -reportprogress 300 ./timescale.v 
-# End time: 22:57:04 on May 13,2025, Elapsed time: 0:00:00
+# End time: 08:53:22 on May 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:57:04 on May 13,2025
+# Start time: 08:53:22 on May 19,2025
 # vlog -reportprogress 300 ./i2c_master_defines.v 
-# End time: 22:57:04 on May 13,2025, Elapsed time: 0:00:00
+# End time: 08:53:22 on May 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:57:04 on May 13,2025
+# Start time: 08:53:22 on May 19,2025
 # vlog -reportprogress 300 ./i2c_master_bit_ctrl.v 
 # -- Compiling module i2c_master_bit_ctrl
 # 
 # Top level modules:
 # 	i2c_master_bit_ctrl
-# End time: 22:57:04 on May 13,2025, Elapsed time: 0:00:00
+# End time: 08:53:23 on May 19,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:57:04 on May 13,2025
+# Start time: 08:53:23 on May 19,2025
 # vlog -reportprogress 300 ./i2c_master_byte_ctrl.v 
 # -- Compiling module i2c_master_byte_ctrl
 # 
 # Top level modules:
 # 	i2c_master_byte_ctrl
-# End time: 22:57:04 on May 13,2025, Elapsed time: 0:00:00
+# End time: 08:53:23 on May 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:57:04 on May 13,2025
+# Start time: 08:53:23 on May 19,2025
 # vlog -reportprogress 300 ./i2c_master_top.v 
 # -- Compiling module i2c_master_top
 # 
 # Top level modules:
 # 	i2c_master_top
-# End time: 22:57:04 on May 13,2025, Elapsed time: 0:00:00
+# End time: 08:53:23 on May 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:57:04 on May 13,2025
+# Start time: 08:53:23 on May 19,2025
 # vlog -reportprogress 300 ./i2c_master_single_byte.v 
 # -- Compiling module i2c_master_single_byte
 # 
 # Top level modules:
 # 	i2c_master_single_byte
-# End time: 22:57:04 on May 13,2025, Elapsed time: 0:00:00
+# End time: 08:53:23 on May 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:57:04 on May 13,2025
+# Start time: 08:53:23 on May 19,2025
 # vlog -reportprogress 300 ./i2c_master_single_byte_tb.v 
 # -- Compiling module i2c_master_single_byte_tb
 # 
 # Top level modules:
 # 	i2c_master_single_byte_tb
-# End time: 22:57:04 on May 13,2025, Elapsed time: 0:00:00
+# End time: 08:53:23 on May 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:57:04 on May 13,2025
+# Start time: 08:53:23 on May 19,2025
 # vlog -reportprogress 300 ./i2c_master_top_tb.v 
 # -- Compiling module i2c_master_top_tb
 # 
 # Top level modules:
 # 	i2c_master_top_tb
-# End time: 22:57:04 on May 13,2025, Elapsed time: 0:00:00
+# End time: 08:53:23 on May 19,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" -t 1ps -lib work i2c_master_single_byte_tb 
-# Start time: 22:57:04 on May 13,2025
+# Start time: 08:53:23 on May 19,2025
 # Loading work.i2c_master_single_byte_tb
 # Loading work.i2c_master_single_byte
 # Loading work.i2c_master_byte_ctrl
 # Loading work.i2c_master_bit_ctrl
-# End time: 22:57:09 on May 13,2025, Elapsed time: 0:00:05
+# End time: 08:53:34 on May 19,2025, Elapsed time: 0:00:11
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" -t 1ps -lib work i2c_master_top_tb 
-# Start time: 22:57:09 on May 13,2025
+# Start time: 08:53:34 on May 19,2025
 # Loading work.i2c_master_top_tb
 # Loading work.i2c_master_top
 # Loading work.i2c_master_byte_ctrl
 # Loading work.i2c_master_bit_ctrl
-# ** Error: Cannot open macro file: i2c_master_top_wave.do
-# Error in macro ./runlab.do line 29
-# Cannot open macro file: i2c_master_top_wave.do
-#     while executing
-# "do    i2c_master_top_wave.do"
-add wave -position end  sim:/i2c_master_top_tb/CHECK_DELAY
-add wave -position end  sim:/i2c_master_top_tb/CLK_PERIOD
-add wave -position end  sim:/i2c_master_top_tb/M_ACK_ADDR
-add wave -position end  sim:/i2c_master_top_tb/M_ACK_DATA
-add wave -position end  sim:/i2c_master_top_tb/M_ADDR
-add wave -position end  sim:/i2c_master_top_tb/M_DATA
-add wave -position end  sim:/i2c_master_top_tb/M_IDLE
-add wave -position end  sim:/i2c_master_top_tb/PRESCALE
-add wave -position end  sim:/i2c_master_top_tb/SLAVE_ADDR
-add wave -position end  sim:/i2c_master_top_tb/S_ACK_ADDR
-add wave -position end  sim:/i2c_master_top_tb/S_ACK_RD
-add wave -position end  sim:/i2c_master_top_tb/S_ACK_WR
-add wave -position end  sim:/i2c_master_top_tb/S_ADDR
-add wave -position end  sim:/i2c_master_top_tb/S_IDLE
-add wave -position end  sim:/i2c_master_top_tb/S_RD_DATA
-add wave -position end  sim:/i2c_master_top_tb/S_WR_DATA
-add wave -position end  sim:/i2c_master_top_tb/WR_DATA
-add wave -position end  sim:/i2c_master_top_tb/arst_i
-add wave -position end  sim:/i2c_master_top_tb/m_Bit_Count
-add wave -position end  sim:/i2c_master_top_tb/m_Monitor_State
-add wave -position end  sim:/i2c_master_top_tb/m_Received_Byte
-add wave -position end  sim:/i2c_master_top_tb/r_Scl_Slave
-add wave -position end  sim:/i2c_master_top_tb/r_Sda_Slave
-add wave -position end  sim:/i2c_master_top_tb/s_Bit_Count
-add wave -position end  sim:/i2c_master_top_tb/s_Is_Read
-add wave -position end  sim:/i2c_master_top_tb/s_Received_Byte
-add wave -position end  sim:/i2c_master_top_tb/s_Scl_Delay
-add wave -position end  sim:/i2c_master_top_tb/s_Scl_High_Counter
-add wave -position end  sim:/i2c_master_top_tb/s_Scl_Last
-add wave -position end  sim:/i2c_master_top_tb/s_Sda_Delay
-add wave -position end  sim:/i2c_master_top_tb/s_Sda_Stable
-add wave -position end  sim:/i2c_master_top_tb/s_Slave_Data
-add wave -position end  sim:/i2c_master_top_tb/s_Slave_State
-add wave -position end  sim:/i2c_master_top_tb/scl_pad_i
-add wave -position end  sim:/i2c_master_top_tb/scl_pad_o
-add wave -position end  sim:/i2c_master_top_tb/scl_padoen_o
-add wave -position end  sim:/i2c_master_top_tb/sda_pad_i
-add wave -position end  sim:/i2c_master_top_tb/sda_pad_o
-add wave -position end  sim:/i2c_master_top_tb/sda_padoen_o
-add wave -position end  sim:/i2c_master_top_tb/status
-add wave -position end  sim:/i2c_master_top_tb/w_Scl
-add wave -position end  sim:/i2c_master_top_tb/w_Scl_Rising
-add wave -position end  sim:/i2c_master_top_tb/w_Sda
-add wave -position end  sim:/i2c_master_top_tb/w_Start_Detected
-add wave -position end  sim:/i2c_master_top_tb/w_Stop_Detected
-add wave -position end  sim:/i2c_master_top_tb/wb_ack_o
-add wave -position end  sim:/i2c_master_top_tb/wb_adr_i
-add wave -position end  sim:/i2c_master_top_tb/wb_clk_i
-add wave -position end  sim:/i2c_master_top_tb/wb_cyc_i
-add wave -position end  sim:/i2c_master_top_tb/wb_dat_i
-add wave -position end  sim:/i2c_master_top_tb/wb_dat_o
-add wave -position end  sim:/i2c_master_top_tb/wb_inta_o
-add wave -position end  sim:/i2c_master_top_tb/wb_rst_i
-add wave -position end  sim:/i2c_master_top_tb/wb_stb_i
-add wave -position end  sim:/i2c_master_top_tb/wb_we_i
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_top_wave.do}
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_top_wave.do}
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:57:59 on May 13,2025
-# vlog -reportprogress 300 ./timescale.v 
-# End time: 22:57:59 on May 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:57:59 on May 13,2025
-# vlog -reportprogress 300 ./i2c_master_defines.v 
-# End time: 22:58:00 on May 13,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:58:00 on May 13,2025
-# vlog -reportprogress 300 ./i2c_master_bit_ctrl.v 
-# -- Compiling module i2c_master_bit_ctrl
-# 
-# Top level modules:
-# 	i2c_master_bit_ctrl
-# End time: 22:58:00 on May 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:58:00 on May 13,2025
-# vlog -reportprogress 300 ./i2c_master_byte_ctrl.v 
-# -- Compiling module i2c_master_byte_ctrl
-# 
-# Top level modules:
-# 	i2c_master_byte_ctrl
-# End time: 22:58:00 on May 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:58:00 on May 13,2025
-# vlog -reportprogress 300 ./i2c_master_top.v 
-# -- Compiling module i2c_master_top
-# 
-# Top level modules:
-# 	i2c_master_top
-# End time: 22:58:00 on May 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:58:00 on May 13,2025
-# vlog -reportprogress 300 ./i2c_master_single_byte.v 
-# -- Compiling module i2c_master_single_byte
-# 
-# Top level modules:
-# 	i2c_master_single_byte
-# End time: 22:58:00 on May 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:58:00 on May 13,2025
-# vlog -reportprogress 300 ./i2c_master_single_byte_tb.v 
-# -- Compiling module i2c_master_single_byte_tb
-# 
-# Top level modules:
-# 	i2c_master_single_byte_tb
-# End time: 22:58:00 on May 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:58:00 on May 13,2025
-# vlog -reportprogress 300 ./i2c_master_top_tb.v 
-# -- Compiling module i2c_master_top_tb
-# 
-# Top level modules:
-# 	i2c_master_top_tb
-# End time: 22:58:00 on May 13,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 22:58:01 on May 13,2025, Elapsed time: 0:00:52
-# Errors: 3, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work i2c_master_single_byte_tb 
-# Start time: 22:58:01 on May 13,2025
-# Loading work.i2c_master_single_byte_tb
-# Loading work.i2c_master_single_byte
-# Loading work.i2c_master_byte_ctrl
-# Loading work.i2c_master_bit_ctrl
-# End time: 22:58:03 on May 13,2025, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work i2c_master_top_tb 
-# Start time: 22:58:03 on May 13,2025
-# Loading work.i2c_master_top_tb
-# Loading work.i2c_master_top
-# Loading work.i2c_master_byte_ctrl
-# Loading work.i2c_master_bit_ctrl
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Max Lan  Hostname: DESKTOP-MG7U4AC  ProcessID: 47900
+#           Attempting to use alternate WLF file "./wlft05xddw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft05xddw
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
@@ -242,255 +103,5 @@ do runlab.do
 #    Time: 321796875 ps  Iteration: 0  Instance: /i2c_master_top_tb
 # 1
 # Break in Module i2c_master_top_tb at ./i2c_master_top_tb.v line 390
-add wave -position end  sim:/i2c_master_top_tb/wb_clk_i
-add wave -position end  sim:/i2c_master_top_tb/wb_cyc_i
-add wave -position end  sim:/i2c_master_top_tb/wb_dat_i
-add wave -position end  sim:/i2c_master_top_tb/wb_dat_o
-add wave -position end  sim:/i2c_master_top_tb/wb_inta_o
-add wave -position end  sim:/i2c_master_top_tb/wb_rst_i
-add wave -position end  sim:/i2c_master_top_tb/wb_stb_i
-add wave -position end  sim:/i2c_master_top_tb/wb_we_i
-add wave -position end  sim:/i2c_master_top_tb/wb_ack_o
-add wave -position end  sim:/i2c_master_top_tb/wb_adr_i
-add wave -position end  sim:/i2c_master_top_tb/wb_clk_i
-add wave -position end  sim:/i2c_master_top_tb/arst_i
-add wave -position end  sim:/i2c_master_top_tb/scl_pad_i
-add wave -position end  sim:/i2c_master_top_tb/scl_pad_o
-add wave -position end  sim:/i2c_master_top_tb/scl_padoen_o
-add wave -position end  sim:/i2c_master_top_tb/sda_pad_i
-add wave -position end  sim:/i2c_master_top_tb/sda_pad_o
-add wave -position end  sim:/i2c_master_top_tb/sda_padoen_o
-add wave -position 17  sim:/i2c_master_top_tb/sda_padoen_o
-add wave -position end  sim:/i2c_master_top_tb/r_Sda_Slave
-add wave -position end  sim:/i2c_master_top_tb/w_Sda
-add wave -position end  sim:/i2c_master_top_tb/r_Scl_Slave
-add wave -position end  sim:/i2c_master_top_tb/w_Scl
-add wave -position end  sim:/i2c_master_top_tb/S_ACK_ADDR
-add wave -position end  sim:/i2c_master_top_tb/S_ACK_RD
-add wave -position end  sim:/i2c_master_top_tb/S_ACK_WR
-add wave -position end  sim:/i2c_master_top_tb/S_ADDR
-add wave -position end  sim:/i2c_master_top_tb/s_Bit_Count
-add wave -position end  sim:/i2c_master_top_tb/S_IDLE
-add wave -position end  sim:/i2c_master_top_tb/s_Is_Read
-add wave -position end  sim:/i2c_master_top_tb/S_RD_DATA
-add wave -position end  sim:/i2c_master_top_tb/s_Received_Byte
-add wave -position end  sim:/i2c_master_top_tb/s_Scl_Delay
-add wave -position end  sim:/i2c_master_top_tb/s_Scl_High_Counter
-add wave -position end  sim:/i2c_master_top_tb/s_Scl_Last
-add wave -position end  sim:/i2c_master_top_tb/s_Sda_Delay
-add wave -position end  sim:/i2c_master_top_tb/s_Sda_Stable
-add wave -position end  sim:/i2c_master_top_tb/s_Slave_Data
-add wave -position end  sim:/i2c_master_top_tb/s_Slave_State
-add wave -position end  sim:/i2c_master_top_tb/w_Start_Detected
-add wave -position end  sim:/i2c_master_top_tb/w_Stop_Detected
-add wave -position end  sim:/i2c_master_top_tb/w_Scl_Rising
-add wave -position end  sim:/i2c_master_top_tb/m_Received_Byte
-add wave -position end  sim:/i2c_master_top_tb/m_Bit_Count
-add wave -position end  sim:/i2c_master_top_tb/m_Monitor_State
-add wave -position end  sim:/i2c_master_top_tb/s_Sda_Stable
-add wave -position end  sim:/i2c_master_top_tb/s_Scl_High_Counter
-add wave -position end  sim:/i2c_master_top_tb/status
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_top_wave.do}
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:38:54 on May 14,2025
-# vlog -reportprogress 300 ./timescale.v 
-# End time: 11:38:54 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:38:54 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_defines.v 
-# End time: 11:38:54 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:38:54 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_bit_ctrl.v 
-# -- Compiling module i2c_master_bit_ctrl
-# 
-# Top level modules:
-# 	i2c_master_bit_ctrl
-# End time: 11:38:55 on May 14,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:38:55 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_byte_ctrl.v 
-# -- Compiling module i2c_master_byte_ctrl
-# 
-# Top level modules:
-# 	i2c_master_byte_ctrl
-# End time: 11:38:55 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:38:55 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_top.v 
-# -- Compiling module i2c_master_top
-# 
-# Top level modules:
-# 	i2c_master_top
-# End time: 11:38:55 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:38:55 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_single_byte.v 
-# -- Compiling module i2c_master_single_byte
-# 
-# Top level modules:
-# 	i2c_master_single_byte
-# End time: 11:38:55 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:38:55 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_single_byte_tb.v 
-# -- Compiling module i2c_master_single_byte_tb
-# 
-# Top level modules:
-# 	i2c_master_single_byte_tb
-# End time: 11:38:55 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:38:55 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_top_tb.v 
-# -- Compiling module i2c_master_top_tb
-# 
-# Top level modules:
-# 	i2c_master_top_tb
-# End time: 11:38:55 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 11:38:57 on May 14,2025, Elapsed time: 12:40:54
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work i2c_master_single_byte_tb 
-# Start time: 11:38:57 on May 14,2025
-# Loading work.i2c_master_single_byte_tb
-# Loading work.i2c_master_single_byte
-# Loading work.i2c_master_byte_ctrl
-# Loading work.i2c_master_bit_ctrl
-# End time: 11:38:59 on May 14,2025, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work i2c_master_top_tb 
-# Start time: 11:38:59 on May 14,2025
-# Loading work.i2c_master_top_tb
-# Loading work.i2c_master_top
-# Loading work.i2c_master_byte_ctrl
-# Loading work.i2c_master_bit_ctrl
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# Starting I2C Master Top Testbench
-# 8516000: START condition detected
-# 95547000: Address + R/W: 0xa2 (Addr: 0x51, R/W: 0)
-# 106547000: Address ACK: 1
-# 111703000: Status after address: RxACK=1, TIP=0
-# 111703000: ERROR: Slave did not acknowledge address
-# 205547000: Slave received data: 0xac
-# 221547000: STOP condition detected
-# 221703000: Status after data: RxACK=1, TIP=0
-# 221703000: ERROR: Slave did not acknowledge data
-# 
-# 321797000: Testbench Complete
-# ** Note: $finish    : ./i2c_master_top_tb.v(390)
-#    Time: 321796875 ps  Iteration: 0  Instance: /i2c_master_top_tb
-# 1
-# Break in Module i2c_master_top_tb at ./i2c_master_top_tb.v line 390
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_top_wave.do}
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:39:42 on May 14,2025
-# vlog -reportprogress 300 ./timescale.v 
-# End time: 11:39:42 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:39:42 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_defines.v 
-# End time: 11:39:42 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:39:42 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_bit_ctrl.v 
-# -- Compiling module i2c_master_bit_ctrl
-# 
-# Top level modules:
-# 	i2c_master_bit_ctrl
-# End time: 11:39:42 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:39:42 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_byte_ctrl.v 
-# -- Compiling module i2c_master_byte_ctrl
-# 
-# Top level modules:
-# 	i2c_master_byte_ctrl
-# End time: 11:39:42 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:39:42 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_top.v 
-# -- Compiling module i2c_master_top
-# 
-# Top level modules:
-# 	i2c_master_top
-# End time: 11:39:42 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:39:42 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_single_byte.v 
-# -- Compiling module i2c_master_single_byte
-# 
-# Top level modules:
-# 	i2c_master_single_byte
-# End time: 11:39:42 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:39:42 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_single_byte_tb.v 
-# -- Compiling module i2c_master_single_byte_tb
-# 
-# Top level modules:
-# 	i2c_master_single_byte_tb
-# End time: 11:39:42 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:39:42 on May 14,2025
-# vlog -reportprogress 300 ./i2c_master_top_tb.v 
-# -- Compiling module i2c_master_top_tb
-# 
-# Top level modules:
-# 	i2c_master_top_tb
-# End time: 11:39:42 on May 14,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 11:39:44 on May 14,2025, Elapsed time: 0:00:45
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work i2c_master_single_byte_tb 
-# Start time: 11:39:44 on May 14,2025
-# Loading work.i2c_master_single_byte_tb
-# Loading work.i2c_master_single_byte
-# Loading work.i2c_master_byte_ctrl
-# Loading work.i2c_master_bit_ctrl
-# End time: 11:39:46 on May 14,2025, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work i2c_master_top_tb 
-# Start time: 11:39:46 on May 14,2025
-# Loading work.i2c_master_top_tb
-# Loading work.i2c_master_top
-# Loading work.i2c_master_byte_ctrl
-# Loading work.i2c_master_bit_ctrl
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# Starting I2C Master Top Testbench
-# 8516000: START condition detected
-# 95547000: Address + R/W: 0xa2 (Addr: 0x51, R/W: 0)
-# 106547000: Address ACK: 1
-# 111703000: Status after address: RxACK=1, TIP=0
-# 111703000: ERROR: Slave did not acknowledge address
-# 205547000: Slave received data: 0xac
-# 221547000: STOP condition detected
-# 221703000: Status after data: RxACK=1, TIP=0
-# 221703000: ERROR: Slave did not acknowledge data
-# 
-# 321797000: Testbench Complete
-# ** Note: $finish    : ./i2c_master_top_tb.v(390)
-#    Time: 321796875 ps  Iteration: 0  Instance: /i2c_master_top_tb
-# 1
-# Break in Module i2c_master_top_tb at ./i2c_master_top_tb.v line 390
+# End time: 11:41:53 on May 19,2025, Elapsed time: 2:48:19
+# Errors: 0, Warnings: 2

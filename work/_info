@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115
 vi2c_master_bit_ctrl
-Z1 !s110 1747247982
+Z1 !s110 1747670003
 !i10b 1
 !s100 ^4ZSVS`mZgiQNZVMUoai91
 IIXg6X70]BFJZlZ=hCC<7H0
@@ -23,11 +23,11 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1747247982.000000
+!s108 1747670002.000000
 !s107 i2c_master_defines.v|timescale.v|./i2c_master_bit_ctrl.v|
 !s90 -reportprogress|300|./i2c_master_bit_ctrl.v|
 !i113 1
-Z6 tCvgOpt 0
+Z5 tCvgOpt 0
 vi2c_master_byte_ctrl
 R1
 !i10b 1
@@ -43,11 +43,11 @@ R4
 r1
 !s85 0
 31
-R5
+Z6 !s108 1747670003.000000
 !s107 i2c_master_defines.v|timescale.v|./i2c_master_byte_ctrl.v|
 !s90 -reportprogress|300|./i2c_master_byte_ctrl.v|
 !i113 1
-R6
+R5
 vi2c_master_single_byte
 R1
 !i10b 1
@@ -63,11 +63,11 @@ R4
 r1
 !s85 0
 31
-R5
+R6
 !s107 i2c_master_defines.v|timescale.v|./i2c_master_single_byte.v|
 !s90 -reportprogress|300|./i2c_master_single_byte.v|
 !i113 1
-R6
+R5
 vi2c_master_single_byte_tb
 R1
 !i10b 1
@@ -83,11 +83,11 @@ R4
 r1
 !s85 0
 31
-R5
+R6
 !s107 ./i2c_master_single_byte_tb.v|
 !s90 -reportprogress|300|./i2c_master_single_byte_tb.v|
 !i113 1
-R6
+R5
 vi2c_master_top
 R1
 !i10b 1
@@ -103,11 +103,11 @@ R4
 r1
 !s85 0
 31
-R5
+R6
 !s107 i2c_master_defines.v|timescale.v|./i2c_master_top.v|
 !s90 -reportprogress|300|./i2c_master_top.v|
 !i113 1
-R6
+R5
 vi2c_master_top_tb
 R1
 !i10b 1
@@ -123,8 +123,8 @@ R4
 r1
 !s85 0
 31
-R5
+R6
 !s107 ./i2c_master_top_tb.v|
 !s90 -reportprogress|300|./i2c_master_top_tb.v|
 !i113 1
-R6
+R5

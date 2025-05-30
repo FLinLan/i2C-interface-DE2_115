@@ -1,5 +1,5 @@
 Assembler report for DE1_SoC
-Mon May 26 17:34:43 2025
+Wed May 28 22:16:37 2025
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon May 26 17:34:43 2025 ;
+; Assembler Status      ; Successful - Wed May 28 22:16:37 2025 ;
 ; Revision Name         ; DE1_SoC                               ;
 ; Top-level Entity Name ; de2_115_i2c_top                       ;
 ; Family                ; Cyclone IV E                          ;
@@ -67,8 +67,8 @@ agreement for further details.
 +----------------+--------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                    ;
 +----------------+--------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0057EB59                                                                                 ;
-; Checksum       ; 0x0057EB59                                                                                 ;
+; JTAG usercode  ; 0x0057F014                                                                                 ;
+; Checksum       ; 0x0057F014                                                                                 ;
 +----------------+--------------------------------------------------------------------------------------------+
 
 
@@ -78,15 +78,15 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon May 26 17:34:39 2025
+    Info: Processing started: Wed May 28 22:16:34 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE1_SoC -c DE1_SoC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4683 megabytes
-    Info: Processing ended: Mon May 26 17:34:43 2025
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4684 megabytes
+    Info: Processing ended: Wed May 28 22:16:37 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

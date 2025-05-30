@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon May 26 17:34:37 2025
+Fitter Status : Successful - Wed May 28 22:16:33 2025
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : DE1_SoC
 Top-level Entity Name : de2_115_i2c_top
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 215 / 114,480 ( < 1 % )
+Total logic elements : 214 / 114,480 ( < 1 % )
     Total combinational functions : 206 / 114,480 ( < 1 % )
     Dedicated logic registers : 114 / 114,480 ( < 1 % )
 Total registers : 114

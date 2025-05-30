@@ -1,8 +1,8 @@
 module de2_115_i2c_top (
     input         CLOCK_50,        // 50 MHz clock on DE2-115
     input         RESET_N,         // Active-low reset (e.g., from KEY[0])
-    output        I2C_SCL,         // I2C SCL pin (PIN_F15)
-    inout         I2C_SDA          // I2C SDA pin (PIN_F14)
+    inout         SDA,             // I2C SDA pin (GPIO[0], PIN_AB22)
+    output        SCL              // I2C SCL pin (GPIO[1], PIN_AC15)
 );
     // Wishbone signals
     wire [2:0] wb_adr_i;
@@ -19,10 +19,10 @@ module de2_115_i2c_top (
     wire sda_pad_i, sda_pad_o, sda_padoen_o;
 
     // Tri-state buffers for I2C lines (as per i2c_specs.pdf, page 6)
-    assign I2C_SCL = scl_padoen_o ? 1'bz : scl_pad_o;
-    assign I2C_SDA = sda_padoen_o ? 1'bz : sda_pad_o;
-    assign scl_pad_i = I2C_SCL;
-    assign sda_pad_i = I2C_SDA;
+    assign SCL = scl_padoen_o ? 1'bz : scl_pad_o;
+    assign SDA = sda_padoen_o ? 1'bz : sda_pad_o;
+    assign scl_pad_i = SCL;
+    assign sda_pad_i = SDA;
 
     // Instantiate I2C Master Core
     i2c_master_top #(
@@ -47,11 +47,11 @@ module de2_115_i2c_top (
         .sda_padoen_o(sda_padoen_o)
     );
 
-    // Wishbone Controller (simplified example)
+    // Wishbone Controller
     reg [2:0] state;
     localparam IDLE = 3'd0, CONFIG = 3'd1, ADDR = 3'd2, DATA = 3'd3, WAIT = 3'd4;
     reg [7:0] data_to_write = 8'hAC; // Example data
-    reg [6:0] slave_addr = 7'h51;    // Example slave address
+    reg [6:0] slave_addr = 7'h51;    // Example slave address (matches ESP32)
 
     always @(posedge CLOCK_50 or negedge RESET_N) begin
         if (!RESET_N) begin

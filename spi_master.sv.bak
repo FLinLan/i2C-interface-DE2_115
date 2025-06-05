@@ -1,0 +1,116 @@
+module spi_master (
+    input  logic CLOCK_50,      // 50 MHz system clock
+    input  logic RESET_N,       // Active-low reset (e.g., from KEY)
+    input  logic MISO,          // SPI MISO from Arduino
+    output logic MOSI,          // SPI MOSI to Arduino
+    output logic SCLK,          // SPI Clock
+    output logic SS_N,          // Slave Select (active low)
+    output logic [6:0] HEX0     // Seven-segment display
+);
+
+    // Parameters
+    localparam CLK_FREQ = 50_000_000; // 50 MHz
+    localparam SPI_FREQ = 500_000;    // SPI clock ~500 kHz
+    localparam CLK_DIV = CLK_FREQ / (2 * SPI_FREQ); // Clock divider
+
+    // SPI States
+    typedef enum logic [1:0] {IDLE, INIT, TRANSFER, DONE} state_t;
+    state_t state;
+
+    // Signals
+    logic [7:0] tx_data;        // Data to send
+    logic [7:0] rx_data;        // Data received
+    logic [3:0] bit_cnt;        // Bit counter (8 bits)
+    logic [15:0] clk_cnt;       // Clock divider counter
+    logic sclk_internal;        // Internal SPI clock
+    logic transfer_done;        // Flag for transfer completion
+
+    // Seven-segment display patterns (0-9, A-F, active low)
+    logic [6:0] seg_patterns [0:15];
+    initial begin
+        seg_patterns[0] = 7'b1000000; // 0
+        seg_patterns[1] = 7'b1111001; // 1
+        seg_patterns[2] = 7'b0100100; // 2
+        seg_patterns[3] = 7'b0110000; // 3
+        seg_patterns[4] = 7'b0011001; // 4
+        seg_patterns[5] = 7'b0010010; // 5
+        seg_patterns[6] = 7'b0000010; // 6
+        seg_patterns[7] = 7'b1111000; // 7
+        seg_patterns[8] = 7'b0000000; // 8
+        seg_patterns[9] = 7'b0010000; // 9
+        seg_patterns[10] = 7'b0001000; // A
+        seg_patterns[11] = 7'b0000011; // b
+        seg_patterns[12] = 7'b1000110; // C
+        seg_patterns[13] = 7'b0100001; // d
+        seg_patterns[14] = 7'b0000110; // E
+        seg_patterns[15] = 7'b0001110; // F
+    end
+
+    // Clock divider for SPI clock
+    always_ff @(posedge CLOCK_50 or negedge RESET_N) begin
+        if (!RESET_N) begin
+            clk_cnt <= 0;
+            sclk_internal <= 0;
+        end else begin
+            if (clk_cnt == CLK_DIV - 1) begin
+                clk_cnt <= 0;
+                sclk_internal <= ~sclk_internal;
+            end else begin
+                clk_cnt <= clk_cnt + 1;
+            end
+        end
+    end
+
+    // SPI state machine
+    always_ff @(posedge CLOCK_50 or negedge RESET_N) begin
+        if (!RESET_N) begin
+            state <= IDLE;
+            MOSI <= 0;
+            SCLK <= 0;
+            SS_N <= 1;
+            bit_cnt <= 0;
+            tx_data <= 8'h55; // Data to send (0x55)
+            rx_data <= 0;
+            transfer_done <= 0;
+            HEX0 <= seg_patterns[0]; // Display '0' initially
+        end else begin
+            case (state)
+                IDLE: begin
+                    SCLK <= 0;
+                    SS_N <= 1;
+                    bit_cnt <= 0;
+                    if (!transfer_done) begin
+                        state <= INIT;
+                    end
+                end
+                INIT: begin
+                    SS_N <= 0; // Activate slave
+                    state <= TRANSFER;
+                end
+                TRANSFER: begin
+                    if (clk_cnt == CLK_DIV - 1) begin // Sync with SPI clock
+                        SCLK <= sclk_internal;
+                        if (sclk_internal) begin // Falling edge: shift out MOSI, sample MISO
+                            MOSI <= tx_data[7];
+                            rx_data <= {rx_data[6:0], MISO};
+                            tx_data <= {tx_data[6:0], 1'b0};
+                            bit_cnt <= bit_cnt + 1;
+                            if (bit_cnt == 7) begin
+                                state <= DONE;
+                            end
+                        end
+                    end
+                end
+                DONE: begin
+                    SCLK <= 0;
+                    SS_N <= 1;
+                    transfer_done <= 1;
+                    // Display 'A' (0xAA) if received 0xAA, else '5' (0x55)
+                    HEX0 <= (rx_data == 8'hAA) ? seg_patterns[10] : seg_patterns[5];
+                    state <= IDLE;
+                end
+                default: state <= IDLE;
+            endcase
+        end
+    end
+endmodule

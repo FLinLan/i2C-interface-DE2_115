@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Wed May 28 22:16:22 2025
+Wed Jun 04 22:36:52 2025
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,19 +13,10 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |de2_115_i2c_top|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|c_state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master
- 15. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller
- 16. Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller
- 17. Port Connectivity Checks: "i2c_master_top:i2c_master"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -52,16 +43,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 28 22:16:22 2025       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 04 22:36:52 2025       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; DE1_SoC                                     ;
-; Top-level Entity Name              ; de2_115_i2c_top                             ;
+; Top-level Entity Name              ; DE1_SoC                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 217                                         ;
-;     Total combinational functions  ; 203                                         ;
-;     Dedicated logic registers      ; 114                                         ;
-; Total registers                    ; 114                                         ;
-; Total pins                         ; 4                                           ;
+; Total logic elements               ; 94                                          ;
+;     Total combinational functions  ; 94                                          ;
+;     Dedicated logic registers      ; 43                                          ;
+; Total registers                    ; 43                                          ;
+; Total pins                         ; 110                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -75,7 +66,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; de2_115_i2c_top    ; DE1_SoC            ;
+; Top-level entity name                                                      ; DE1_SoC            ; DE1_SoC            ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; State Machine Processing                                                   ; User-Encoded       ; Auto               ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -172,17 +163,13 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
-; i2c_master_top.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_top.v       ;         ;
-; i2c_master_defines.v             ; yes             ; User Verilog HDL File        ; C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_defines.v   ;         ;
-; i2c_master_byte_ctrl.v           ; yes             ; User Verilog HDL File        ; C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_byte_ctrl.v ;         ;
-; i2c_master_bit_ctrl.v            ; yes             ; User Verilog HDL File        ; C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_bit_ctrl.v  ;         ;
-; de2_115_i2c_top.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv     ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; DE1_SoC.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -190,111 +177,45 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 217            ;
+; Estimated Total logic elements              ; 94             ;
 ;                                             ;                ;
-; Total combinational functions               ; 203            ;
+; Total combinational functions               ; 94             ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 91             ;
-;     -- 3 input functions                    ; 41             ;
-;     -- <=2 input functions                  ; 71             ;
+;     -- 4 input functions                    ; 51             ;
+;     -- 3 input functions                    ; 3              ;
+;     -- <=2 input functions                  ; 40             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 175            ;
-;     -- arithmetic mode                      ; 28             ;
+;     -- normal mode                          ; 55             ;
+;     -- arithmetic mode                      ; 39             ;
 ;                                             ;                ;
-; Total registers                             ; 114            ;
-;     -- Dedicated logic registers            ; 114            ;
+; Total registers                             ; 43             ;
+;     -- Dedicated logic registers            ; 43             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 4              ;
+; I/O pins                                    ; 110            ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 114            ;
-; Total fan-out                               ; 1092           ;
-; Average fan-out                             ; 3.35           ;
+; Maximum fan-out                             ; 43             ;
+; Total fan-out                               ; 627            ;
+; Average fan-out                             ; 1.76           ;
 +---------------------------------------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                 ;
-+-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                ; Entity Name          ; Library Name ;
-+-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |de2_115_i2c_top                              ; 203 (7)             ; 114 (7)                   ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |de2_115_i2c_top                                                                                                   ; de2_115_i2c_top      ; work         ;
-;    |i2c_master_top:i2c_master|                ; 196 (18)            ; 107 (12)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2_115_i2c_top|i2c_master_top:i2c_master                                                                         ; i2c_master_top       ; work         ;
-;       |i2c_master_byte_ctrl:byte_controller|  ; 178 (41)            ; 95 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2_115_i2c_top|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller                                    ; i2c_master_byte_ctrl ; work         ;
-;          |i2c_master_bit_ctrl:bit_controller| ; 137 (137)           ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de2_115_i2c_top|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller ; i2c_master_bit_ctrl  ; work         ;
-+-----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
+; |DE1_SoC                   ; 94 (66)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 110  ; 0            ; |DE1_SoC                ; DE1_SoC     ; work         ;
+;    |hex_decoder:h4|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_SoC|hex_decoder:h4 ; hex_decoder ; work         ;
+;    |hex_decoder:h5|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_SoC|hex_decoder:h5 ; hex_decoder ; work         ;
+;    |hex_decoder:h6|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_SoC|hex_decoder:h6 ; hex_decoder ; work         ;
+;    |hex_decoder:h7|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_SoC|hex_decoder:h7 ; hex_decoder ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  User-Encoded
-+---------------------------------------------------------------------------------------------------------+
-; State Machine - |de2_115_i2c_top|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|c_state ;
-+------------------+------------+------------+------------+------------+----------------------------------+
-; Name             ; c_state~14 ; c_state~13 ; c_state~12 ; c_state~11 ; c_state~10                       ;
-+------------------+------------+------------+------------+------------+----------------------------------+
-; c_state.ST_IDLE  ; 0          ; 0          ; 0          ; 0          ; 0                                ;
-; c_state.ST_START ; 0          ; 0          ; 0          ; 0          ; 1                                ;
-; c_state.ST_READ  ; 0          ; 0          ; 0          ; 1          ; 0                                ;
-; c_state.ST_WRITE ; 0          ; 0          ; 1          ; 0          ; 0                                ;
-; c_state.ST_ACK   ; 0          ; 1          ; 0          ; 0          ; 0                                ;
-; c_state.ST_STOP  ; 1          ; 0          ; 0          ; 0          ; 0                                ;
-+------------------+------------+------------+------------+------------+----------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                                    ;
-+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                                 ; Reason for Removal                                                                                                    ;
-+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+
-; wb_dat_i[2..4]                                                                                                ; Stuck at GND due to stuck port data_in                                                                                ;
-; i2c_master_top:i2c_master|txr[2..4]                                                                           ; Stuck at GND due to stuck port data_in                                                                                ;
-; i2c_master_top:i2c_master|cr[3]                                                                               ; Stuck at GND due to stuck port data_in                                                                                ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[16] ; Merged with i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|sda_chk ;
-; i2c_master_top:i2c_master|cr[6]                                                                               ; Merged with i2c_master_top:i2c_master|cr[5]                                                                           ;
-; wb_dat_i[1,5,6]                                                                                               ; Merged with wb_dat_i[0]                                                                                               ;
-; wb_stb_i                                                                                                      ; Merged with wb_cyc_i                                                                                                  ;
-; i2c_master_top:i2c_master|prer[11,12]                                                                         ; Merged with i2c_master_top:i2c_master|prer[10]                                                                        ;
-; i2c_master_top:i2c_master|prer[3,4]                                                                           ; Merged with i2c_master_top:i2c_master|prer[2]                                                                         ;
-; i2c_master_top:i2c_master|txr[1,5,6]                                                                          ; Merged with i2c_master_top:i2c_master|txr[0]                                                                          ;
-; i2c_master_top:i2c_master|prer[8,9,14]                                                                        ; Merged with i2c_master_top:i2c_master|prer[13]                                                                        ;
-; i2c_master_top:i2c_master|prer[1,5,6]                                                                         ; Merged with i2c_master_top:i2c_master|prer[0]                                                                         ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[17] ; Stuck at GND due to stuck port data_in                                                                                ;
-; i2c_master_top:i2c_master|cr[4]                                                                               ; Stuck at GND due to stuck port data_in                                                                                ;
-; state[2]                                                                                                      ; Stuck at GND due to stuck port data_in                                                                                ;
-; i2c_master_top:i2c_master|wb_dat_o[1]                                                                         ; Lost fanout                                                                                                           ;
-; i2c_master_top:i2c_master|tip                                                                                 ; Lost fanout                                                                                                           ;
-; i2c_master_top:i2c_master|ctr[1]                                                                              ; Lost fanout                                                                                                           ;
-; i2c_master_top:i2c_master|wb_dat_o[7]                                                                         ; Lost fanout                                                                                                           ;
-; i2c_master_top:i2c_master|rxack                                                                               ; Lost fanout                                                                                                           ;
-; wb_adr_i[2]                                                                                                   ; Stuck at GND due to stuck port data_in                                                                                ;
-; i2c_master_top:i2c_master|cr[1]                                                                               ; Stuck at GND due to stuck port data_in                                                                                ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|ack_out                                        ; Lost fanout                                                                                                           ;
-; wb_adr_i[1]                                                                                                   ; Merged with wb_dat_i[7]                                                                                               ;
-; Total Number of Removed Registers = 38                                                                        ;                                                                                                                       ;
-+---------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                ;
-+---------------------------------------+---------------------------+------------------------------------------------------------------------+
-; Register name                         ; Reason for Removal        ; Registers Removed due to This Register                                 ;
-+---------------------------------------+---------------------------+------------------------------------------------------------------------+
-; wb_dat_i[4]                           ; Stuck at GND              ; i2c_master_top:i2c_master|txr[4], i2c_master_top:i2c_master|cr[4]      ;
-;                                       ; due to stuck port data_in ;                                                                        ;
-; wb_dat_i[3]                           ; Stuck at GND              ; i2c_master_top:i2c_master|txr[3], i2c_master_top:i2c_master|cr[3]      ;
-;                                       ; due to stuck port data_in ;                                                                        ;
-; state[2]                              ; Stuck at GND              ; wb_adr_i[2], i2c_master_top:i2c_master|cr[1]                           ;
-;                                       ; due to stuck port data_in ;                                                                        ;
-; i2c_master_top:i2c_master|wb_dat_o[7] ; Lost Fanouts              ; i2c_master_top:i2c_master|rxack,                                       ;
-;                                       ;                           ; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|ack_out ;
-; wb_dat_i[2]                           ; Stuck at GND              ; i2c_master_top:i2c_master|txr[2]                                       ;
-;                                       ; due to stuck port data_in ;                                                                        ;
-; i2c_master_top:i2c_master|wb_dat_o[1] ; Lost Fanouts              ; i2c_master_top:i2c_master|tip                                          ;
-+---------------------------------------+---------------------------+------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -302,125 +223,14 @@ Encoding Type:  User-Encoded
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 114   ;
-; Number of registers using Synchronous Clear  ; 27    ;
-; Number of registers using Synchronous Load   ; 30    ;
-; Number of registers using Asynchronous Clear ; 111   ;
+; Total registers                              ; 43    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 43    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 50    ;
+; Number of registers using Clock Enable       ; 15    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Inverted Register Statistics                                                                                        ;
-+-----------------------------------------------------------------------------------------------------------+---------+
-; Inverted Register                                                                                         ; Fan out ;
-+-----------------------------------------------------------------------------------------------------------+---------+
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|scl_oen ; 6       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|clk_en  ; 3       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|sda_oen ; 3       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|sSDA    ; 4       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|sSCL    ; 5       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|dSCL    ; 2       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|dSDA    ; 1       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|fSDA[1] ; 2       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|fSDA[0] ; 2       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|fSDA[2] ; 1       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|fSCL[1] ; 2       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|fSCL[0] ; 2       ;
-; i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|fSCL[2] ; 1       ;
-; i2c_master_top:i2c_master|prer[2]                                                                         ; 4       ;
-; i2c_master_top:i2c_master|prer[0]                                                                         ; 5       ;
-; i2c_master_top:i2c_master|prer[7]                                                                         ; 2       ;
-; i2c_master_top:i2c_master|prer[13]                                                                        ; 5       ;
-; i2c_master_top:i2c_master|prer[10]                                                                        ; 4       ;
-; i2c_master_top:i2c_master|prer[15]                                                                        ; 2       ;
-; Total number of inverted registers = 19                                                                   ;         ;
-+-----------------------------------------------------------------------------------------------------------+---------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |de2_115_i2c_top|i2c_master_top:i2c_master|cr[5]                                                                                  ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |de2_115_i2c_top|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[6]     ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |de2_115_i2c_top|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|sr[2]                                             ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |de2_115_i2c_top|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|sr[5]                                             ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |de2_115_i2c_top|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|cnt[4]         ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |de2_115_i2c_top|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|filter_cnt[11] ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |de2_115_i2c_top|i2c_master_top:i2c_master|wb_dat_o[1]                                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |de2_115_i2c_top|i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|c_state[13]    ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |de2_115_i2c_top|wb_adr_i[0]                                                                                                      ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |de2_115_i2c_top|wb_dat_i[7]                                                                                                      ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |de2_115_i2c_top|state[1]                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2c_master_top:i2c_master ;
-+----------------+-------+-----------------------------------------------+
-; Parameter Name ; Value ; Type                                          ;
-+----------------+-------+-----------------------------------------------+
-; ARST_LVL       ; 0     ; Unsigned Binary                               ;
-+----------------+-------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller ;
-+----------------+-------+------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                               ;
-+----------------+-------+------------------------------------------------------------------------------------+
-; ST_IDLE        ; 00000 ; Unsigned Binary                                                                    ;
-; ST_START       ; 00001 ; Unsigned Binary                                                                    ;
-; ST_READ        ; 00010 ; Unsigned Binary                                                                    ;
-; ST_WRITE       ; 00100 ; Unsigned Binary                                                                    ;
-; ST_ACK         ; 01000 ; Unsigned Binary                                                                    ;
-; ST_STOP        ; 10000 ; Unsigned Binary                                                                    ;
-+----------------+-------+------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller ;
-+----------------+--------------------+----------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value              ; Type                                                                                                     ;
-+----------------+--------------------+----------------------------------------------------------------------------------------------------------+
-; idle           ; 000000000000000000 ; Unsigned Binary                                                                                          ;
-; start_a        ; 000000000000000001 ; Unsigned Binary                                                                                          ;
-; start_b        ; 000000000000000010 ; Unsigned Binary                                                                                          ;
-; start_c        ; 000000000000000100 ; Unsigned Binary                                                                                          ;
-; start_d        ; 000000000000001000 ; Unsigned Binary                                                                                          ;
-; start_e        ; 000000000000010000 ; Unsigned Binary                                                                                          ;
-; stop_a         ; 000000000000100000 ; Unsigned Binary                                                                                          ;
-; stop_b         ; 000000000001000000 ; Unsigned Binary                                                                                          ;
-; stop_c         ; 000000000010000000 ; Unsigned Binary                                                                                          ;
-; stop_d         ; 000000000100000000 ; Unsigned Binary                                                                                          ;
-; rd_a           ; 000000001000000000 ; Unsigned Binary                                                                                          ;
-; rd_b           ; 000000010000000000 ; Unsigned Binary                                                                                          ;
-; rd_c           ; 000000100000000000 ; Unsigned Binary                                                                                          ;
-; rd_d           ; 000001000000000000 ; Unsigned Binary                                                                                          ;
-; wr_a           ; 000010000000000000 ; Unsigned Binary                                                                                          ;
-; wr_b           ; 000100000000000000 ; Unsigned Binary                                                                                          ;
-; wr_c           ; 001000000000000000 ; Unsigned Binary                                                                                          ;
-; wr_d           ; 010000000000000000 ; Unsigned Binary                                                                                          ;
-+----------------+--------------------+----------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "i2c_master_top:i2c_master"                                                                    ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; wb_rst_i       ; Input  ; Info     ; Stuck at GND                                                                        ;
-; wb_dat_o[6..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; wb_dat_o[0]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; wb_inta_o      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -428,26 +238,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 4                           ;
-; cycloneiii_ff         ; 114                         ;
-;     CLR               ; 18                          ;
-;     CLR SCLR          ; 13                          ;
-;     CLR SCLR SLD      ; 14                          ;
-;     CLR SLD           ; 16                          ;
-;     ENA CLR           ; 50                          ;
-;     plain             ; 3                           ;
-; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 203                         ;
-;     arith             ; 28                          ;
-;         2 data inputs ; 28                          ;
-;     normal            ; 175                         ;
-;         1 data inputs ; 17                          ;
-;         2 data inputs ; 26                          ;
-;         3 data inputs ; 41                          ;
-;         4 data inputs ; 91                          ;
+; boundary_port         ; 110                         ;
+; cycloneiii_ff         ; 43                          ;
+;     CLR               ; 28                          ;
+;     ENA CLR           ; 15                          ;
+; cycloneiii_lcell_comb ; 119                         ;
+;     arith             ; 39                          ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 80                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 26                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 51                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 2.84                        ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 1.97                        ;
 +-----------------------+-----------------------------+
 
 
@@ -466,10 +272,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed May 28 22:16:14 2025
+    Info: Processing started: Wed Jun 04 22:36:45 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file de1_soc.sv
+    Info (12023): Found entity 1: DE1_SoC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 1
+    Info (12023): Found entity 2: hex_decoder File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 144
 Info (12021): Found 0 design units, including 0 entities, in source file timescale.v
 Info (12021): Found 1 design units, including 1 entities, in source file i2c_master_top.v
     Info (12023): Found entity 1: i2c_master_top File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_top.v Line: 78
@@ -488,41 +297,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file i2c_mas
     Info (12023): Found entity 1: i2c_master_top_tb File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_top_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file de2_115_i2c_top.sv
     Info (12023): Found entity 1: de2_115_i2c_top File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file spi_master.sv
+    Info (12023): Found entity 1: spi_master File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/spi_master.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at i2c_master_single_byte.v(45): created implicit net for "o_Done" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_single_byte.v Line: 45
-Info (12127): Elaborating entity "de2_115_i2c_top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at de2_115_i2c_top.sv(80): truncated value with size 32 to match size of target (3) File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 80
-Warning (10230): Verilog HDL assignment warning at de2_115_i2c_top.sv(92): truncated value with size 32 to match size of target (3) File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 92
-Warning (10230): Verilog HDL assignment warning at de2_115_i2c_top.sv(117): truncated value with size 32 to match size of target (3) File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 117
-Warning (10230): Verilog HDL assignment warning at de2_115_i2c_top.sv(156): truncated value with size 32 to match size of target (3) File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 156
-Warning (10272): Verilog HDL Case Statement warning at de2_115_i2c_top.sv(107): case item expression covers a value already covered by a previous case item File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 107
-Warning (10272): Verilog HDL Case Statement warning at de2_115_i2c_top.sv(120): case item expression covers a value already covered by a previous case item File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 120
-Warning (10272): Verilog HDL Case Statement warning at de2_115_i2c_top.sv(146): case item expression covers a value already covered by a previous case item File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 146
-Warning (10272): Verilog HDL Case Statement warning at de2_115_i2c_top.sv(159): case item expression covers a value already covered by a previous case item File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 159
-Info (12128): Elaborating entity "i2c_master_top" for hierarchy "i2c_master_top:i2c_master" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 48
-Info (12128): Elaborating entity "i2c_master_byte_ctrl" for hierarchy "i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_top.v Line: 257
-Info (12128): Elaborating entity "i2c_master_bit_ctrl" for hierarchy "i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_byte_ctrl.v Line: 164
-Warning (10230): Verilog HDL assignment warning at i2c_master_bit_ctrl.v(257): truncated value with size 16 to match size of target (14) File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_bit_ctrl.v Line: 257
-Warning (10230): Verilog HDL assignment warning at i2c_master_bit_ctrl.v(258): truncated value with size 32 to match size of target (14) File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_bit_ctrl.v Line: 258
-Warning (10766): Verilog HDL Synthesis Attribute warning at i2c_master_bit_ctrl.v(410): ignoring full_case attribute on case statement with explicit default case item File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_bit_ctrl.v Line: 410
-Info (10264): Verilog HDL Case Statement information at i2c_master_bit_ctrl.v(410): all case item expressions in this case statement are onehot File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_bit_ctrl.v Line: 410
-Warning (10208): Verilog HDL Case Statement warning at i2c_master_bit_ctrl.v(406): honored full_case synthesis attribute - differences between design synthesis and simulation may occur File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_bit_ctrl.v Line: 406
-Warning (13050): Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
-    Warning (13051): Converted the fanout from the open-drain buffer "scl_pad_i" to the node "i2c_master_top:i2c_master|i2c_master_byte_ctrl:byte_controller|i2c_master_bit_ctrl:bit_controller|cSCL[0]" into a wire File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/de2_115_i2c_top.sv Line: 18
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/i2c_master_bit_ctrl.v Line: 161
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(50): truncated value with size 32 to match size of target (27) File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(127): truncated value with size 32 to match size of target (16) File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 127
+Info (12128): Elaborating entity "hex_decoder" for hierarchy "hex_decoder:h4" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 131
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "GPIO_0_2" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 23
+    Warning (13410): Pin "GPIO_0_0" is stuck at GND File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 24
+    Warning (13410): Pin "GPIO_0_6" is stuck at VCC File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 26
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 219 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4826 megabytes
-    Info: Processing ended: Wed May 28 22:16:22 2025
-    Info: Elapsed time: 00:00:08
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "GPIO_0_4" File: C:/Users/Max Lan/EE_Research/RFSoC/i2C-interface-DE2_115/DE1_SoC.sv Line: 22
+Info (21057): Implemented 204 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 24 input pins
+    Info (21059): Implemented 86 output pins
+    Info (21061): Implemented 94 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4824 megabytes
+    Info: Processing ended: Wed Jun 04 22:36:52 2025
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:16
 
 

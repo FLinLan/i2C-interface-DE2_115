@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY de2_115_i2c_top
+set_global_assignment -name TOP_LEVEL_ENTITY DE1_SoC
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "THU JUL 11 11:26:45 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
@@ -54,6 +54,9 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name STATE_MACHINE_PROCESSING "USER-ENCODED"
+set_location_assignment PIN_AB22 -to SDA
+set_location_assignment PIN_AC15 -to SCL
+set_global_assignment -name SYSTEMVERILOG_FILE DE1_SoC.sv
 set_global_assignment -name VERILOG_FILE timescale.v
 set_global_assignment -name VERILOG_FILE i2c_master_top.v
 set_global_assignment -name VERILOG_FILE i2c_master_defines.v
@@ -63,11 +66,10 @@ set_global_assignment -name VERILOG_FILE i2c_master_single_byte.v
 set_global_assignment -name VERILOG_FILE i2c_master_single_byte_tb.v
 set_global_assignment -name VERILOG_FILE i2c_master_top_tb.v
 set_global_assignment -name SYSTEMVERILOG_FILE de2_115_i2c_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE spi_master.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_AB22 -to SDA
-set_location_assignment PIN_AC15 -to SCL
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to SDA
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to SCL
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

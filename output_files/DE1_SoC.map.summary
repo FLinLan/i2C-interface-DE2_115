@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed May 28 22:16:22 2025
+Analysis & Synthesis Status : Successful - Wed Jun 04 22:36:52 2025
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : DE1_SoC
-Top-level Entity Name : de2_115_i2c_top
+Top-level Entity Name : DE1_SoC
 Family : Cyclone IV E
-Total logic elements : 217
-    Total combinational functions : 203
-    Dedicated logic registers : 114
-Total registers : 114
-Total pins : 4
+Total logic elements : 94
+    Total combinational functions : 94
+    Dedicated logic registers : 43
+Total registers : 43
+Total pins : 110
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

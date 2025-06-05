@@ -1,0 +1,20 @@
+module spi_top (
+    input  logic CLOCK_50,
+    input  logic [0:0] KEY,
+    input  logic GPIO_0_4,  // MISO
+    output logic GPIO_0_2,  // MOSI
+    output logic GPIO_0_0,  // SCLK
+    output logic GPIO_0_6,  // SS_N
+    output logic [6:0] HEX0
+);
+    spi_master spi_inst (
+        .CLOCK_50(CLOCK_50),
+        .RESET_N(KEY[0]),
+        .MISO(GPIO_0_4),
+        .MOSI(GPIO_0_2),
+        .SCLK(GPIO_0_0),
+        .SS_N(GPIO_0_6),
+        .HEX0(HEX0)
+    );
+	 
+endmodule

@@ -23,7 +23,7 @@ module de2_115_i2c_top (
     assign SDA = sda_padoen_o ? 1'bz : sda_pad_o;
     assign scl_pad_i = SCL;
     assign sda_pad_i = SDA;
-
+	 
     // Instantiate I2C Master Core
     i2c_master_top #(
         .ARST_LVL(1'b0) // Active-low asynchronous reset
